@@ -6,6 +6,7 @@ Docker image for the [Rapid7's Hackazon](https://github.com/rapid7/hackazon) app
 ## Usage
 
 Image can be built and run using the provided `Makefile`:
+
 * `make` or `make build` builds the container image
 * `make run` starts the container
 
