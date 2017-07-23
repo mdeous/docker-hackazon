@@ -5,7 +5,7 @@ IMAGE_FULLNAME = $(IMAGE_MAINTAINER)/$(IMAGE_NAME):$(IMAGE_TAG)
 
 DOCKER = /usr/bin/docker
 DOCKER_BUILD_ARGS = -t $(IMAGE_FULLNAME)
-DOCKER_RUN_ARGS = -it --rm --name=$(IMAGE_NAME) -p 127.0.0.1:80:80
+DOCKER_RUN_ARGS = -it -d --name=$(IMAGE_NAME) -p 127.0.0.1:80:80
 
 all: build
 

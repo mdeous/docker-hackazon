@@ -1,6 +1,7 @@
 # docker-hackazon
 
-Docker image for the [Rapid7's Hackazon](https://github.com/rapid7/hackazon) application.
+Docker image for the [Rapid7 Hackazon](https://github.com/rapid7/hackazon) vulnerable 
+Web application.
 
 
 ## Usage
