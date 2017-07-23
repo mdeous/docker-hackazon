@@ -12,7 +12,7 @@ RUN apt-get update && \
     mysql-server \
     mysql-client
 
-# download Hackazon and setup required files
+# download Hackazon and setup required files/folders
 RUN git clone --depth=1 https://github.com/rapid7/hackazon /var/www/hackazon
 RUN cd /var/www/hackazon/assets/config/ && \
     cp auth.sample.php auth.php && \
@@ -42,6 +42,7 @@ ADD files/database.sql /tmp/database.sql
 RUN service mysql start && \
     mysql -e "CREATE DATABASE hackazon;" && \
     mysql hackazon < /tmp/database.sql
+RUN rm /tmp/database.sql
 
 # launcher script
 COPY files/hackazon-launcher.sh /var/www/hackazon/launcher.sh
